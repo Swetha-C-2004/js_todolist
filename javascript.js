@@ -1,15 +1,15 @@
-const data=[
-    {
-    id:1,
-    taskName:"reading",
-    status:"completed",
-},
-{
-    id:2,
-    taskName:"Writing",
-    status:"completed",
+//Get data from localStorage
+function getTasks(){
+    let tasks=[];
+    if(localStorage.getItem("tasks")){
+        tasks=JSON.parse(localStorage.getItem("tasks"));
+    }
+    return tasks;
+}
 
-},
-];
-console.log(JSON.stringify(data));
-function renderTasks(){}
+//render Task details in Table Format
+function renderTasks(){
+    console.log(get.tasks());
+}
+//initial call
+renderTasks();
